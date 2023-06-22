@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Registration.css' %}">
+
+<!--    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+
+
+</head>
+<body>
+<div class="center">
+    <form class="form_container" method="POST">
+      {% csrf_token %}
+  <div class="logo_container"></div>
+  <div class="title_container">
+    <p class="title">Login to your Account</p>
+    <span class="subtitle">Get started with our app, just create an account and enjoy the experience.</span>
+  </div>
+  <br>
+  <div class="input_container">
+    <label class="input_label" for="username_field">UserName</label>
+    <input placeholder="username" title="Inpit title" name="input-username" type="text" class="input_field" id="username_field">
+  </div>
+  <div class="input_container">
+    <label class="input_label" for="password_field">Password</label>
+    <input placeholder="Password" title="Inpit title" name="input-password" type="password" class="input_field" id="password_field">
+  </div>
+  <button title="Sign In" type="submit" class="sign-in_btn">
+    <span>Sign In</span>
+  </button>
+
+  <div class="separator">
+    <hr class="line">
+    <span>Or</span>
+    <hr class="line">
+  </div>
+  </button>
+
+  <button title="Sign In" type="button" class="sign-in_apl" >
+    <a href="/" class="link">
+    <span>SignUp</span></a>
+  </button>
+  <p class="note">Terms of use &amp; Conditions</p>
+</form>
+
+</div>
+
+</body>
+</html>

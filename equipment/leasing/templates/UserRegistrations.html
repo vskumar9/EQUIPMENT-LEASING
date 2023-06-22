@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Registration.css' %}">
+
+<!--    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+<!--<script>-->
+<!--   $(document).ready(function() {-->
+<!--    $('form').submit(function(event) {-->
+<!--        event.preventDefault();-->
+<!--        $.ajax({-->
+<!--            type: 'POST',-->
+<!--            url: '',-->
+<!--            data: $(this).serialize(),-->
+<!--            success: function() {-->
+<!--                showMessage('Registration successful!', 'success');-->
+<!--                $('form')[0].reset();-->
+<!--            },-->
+<!--            error: function() {-->
+<!--                showMessage('Registration failed!', 'error');-->
+<!--            }-->
+<!--        });-->
+<!--    });-->
+
+<!--    function showMessage(message, type) {-->
+<!--        var container = $('#message-container');-->
+<!--        var alertClass = 'alert-' + type;-->
+
+<!--        container.html('<div class="alert ' + alertClass + '">' + message + '</div>');-->
+<!--        container.show();-->
+
+<!--        setTimeout(function() {-->
+<!--            container.hide();-->
+<!--        }, 3000);-->
+<!--    }-->
+<!--});-->
+
+<!--</script>-->
+
+
+</head>
+<body>
+<div class="center">
+
+<div id="message-container"></div>
+
+
+    <form class="form_container" method="post">
+            {% csrf_token %}
+        <div class="logo_container"></div>
+            <div class="title_container">
+                <p class="title">SignUp to your Account</p>
+                <span class="subtitle">Get started with our app, just create an account and enjoy the experience.</span>
+            </div>
+            <br>
+            <div class="input_container">
+                <label class="input_label" for="name_field">Name</label>
+                <input placeholder="Name" title="Inpit title" name="input-name" type="text" class="input_field" id="name_field">
+            </div>
+            <div class="input_container">
+                <label class="input_label" for="username_field">UserName</label>
+                <input placeholder="UserName" title="Inpit title" name="input-username" type="text" class="input_field" id="username_field">
+            </div>
+            <div class="input_container">
+                <label class="input_label" for="phone_field">Phone</label>
+                <input placeholder="1234567890" title="Inpit title" name="input-phone" type="text" class="input_field" id="phone_field">
+            </div>
+            <div class="input_container">
+                <label class="input_label" for="email_field">Email</label>
+                <input placeholder="name@mail.com" title="Inpit title" name="input-email" type="text" class="input_field" id="email_field">
+            </div>
+        <div class="input_container">
+                <label class="input_label" for="address_field">Address</label>
+
+                <input placeholder="Visakapatanam" title="Inpit title" name="input-address" type="text" class="input_field" id="address_field">
+            </div>
+            <div class="input_container">
+                <label class="input_label" for="password_field">Password</label>
+                <input placeholder="Password" title="Inpit title" name="input-password" type="password" class="input_field" id="password_field">
+            </div>
+            <button title="Sign In" type="submit" class="sign-in_btn">
+                <span>SignUp</span>
+            </button>
+            <div class="separator">
+                <hr class="line">
+                <span>Or</span>
+                <hr class="line">
+            </div>
+
+  <button title="Sign In" type="button" class="sign-in_apl ">
+       <a href="/userlogin" class="link" > <span>Sign In</span>  </a>
+  </button>
+    <a href="http://">
+  <p class="note">Terms of use &amp; Conditions</p></a>
+</form>
+
+</div>
+
+
+</body>
+</html>

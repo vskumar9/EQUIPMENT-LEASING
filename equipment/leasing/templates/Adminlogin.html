@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Registration.css' %}">
+
+<!--    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+<!--<script>-->
+<!--    $(document).ready(function() {-->
+<!--    $('form').submit(function(event) {-->
+<!--        event.preventDefault();-->
+<!--        $.ajax({-->
+<!--            type: 'POST',-->
+<!--            url: '{% url "adminlogin" %}',-->
+<!--            data: $(this).serialize(),-->
+<!--            success: function() {-->
+<!--                showMessage('login successful!', 'success');-->
+<!--                $('form')[0].reset();-->
+<!--            },-->
+<!--            error: function() {-->
+<!--                showMessage('login failed!', 'error');-->
+<!--            }-->
+<!--        });-->
+<!--    });-->
+
+<!--    function showMessage(message, type) {-->
+<!--        var container = $('#message-container');-->
+<!--        var alertClass = 'alert-' + type;-->
+
+<!--        container.html('<div class="alert ' + alertClass + '">' + message + '</div>');-->
+<!--        container.show();-->
+
+<!--        setTimeout(function() {-->
+<!--            container.hide();-->
+<!--        }, 4200);-->
+<!--    }-->
+<!--});-->
+
+<!--</script>-->
+
+</head>
+<body>
+<div class="center">
+    <form class="form_container" method="POST">
+      {% csrf_token %}
+  <div class="logo_container"></div>
+  <div class="title_container">
+    <p class="title">Admin Login</p>
+    <span class="subtitle">Welcome to Admin login page </span>
+  </div>
+  <br>
+  <div class="input_container">
+    <label class="input_label" for="username_field">UserName</label>
+    <input placeholder="username" title="Inpit title" name="input-username" type="text" class="input_field" id="username_field">
+  </div>
+  <div class="input_container">
+    <label class="input_label" for="password_field">Password</label>
+    <input placeholder="Password" title="Inpit title" name="input-password" type="password" class="input_field" id="password_field">
+  </div>
+  <button title="Sign In" type="submit" class="sign-in_btn">
+    <span>Sign In</span>
+  </button>
+      </button>
+    </form>
+
+</div>
+
+</body>
+</html>
